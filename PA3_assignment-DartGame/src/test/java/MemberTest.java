@@ -30,4 +30,14 @@ public class MemberTest {
 
         assertTrue(sut.getPlayerScores().contains(playerScore));
     }
+
+    /**
+     * @verifies return a member's name
+     * @see Member#getMemberName()
+     */
+    @Test
+    public void getMemberName_shouldReturnAMembersName() throws Exception {
+        //TODO auto-generated
+        Assertions.fail("Not yet implemented");
+    }
 }

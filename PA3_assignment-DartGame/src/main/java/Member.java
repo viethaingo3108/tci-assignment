@@ -32,4 +32,13 @@ public class Member {
     public Set<PlayerScore> getPlayerScores() {
         return playerScores;
     }
+
+    /**
+     * Return player name
+     * @return player name
+     * @should return a member's name
+     */
+    public String getMemberName() {
+        return memberName;
+    }
 }
