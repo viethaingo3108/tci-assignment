@@ -7,7 +7,9 @@ import static org.mockito.Mockito.mock;
 
 public class MemberTest {
 
-    private Member sut = new Member("Hai Ngo");
+    private static String VALID_MEMBER_NAME = "Hai Ngo";
+
+    private Member sut = new Member(VALID_MEMBER_NAME);
     private PlayerScore playerScore = mock(PlayerScore.class);
 
     /**
@@ -38,6 +40,6 @@ public class MemberTest {
      */
     @Test
     public void getMemberName_shouldReturnAMembersName() throws Exception {
-        assertEquals(sut.getMemberName(), "Hai Ngo");
+        assertEquals(sut.getMemberName(), VALID_MEMBER_NAME);
     }
 }
