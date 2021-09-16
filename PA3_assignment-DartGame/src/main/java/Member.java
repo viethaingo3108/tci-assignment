@@ -16,7 +16,7 @@ public class Member {
     }
 
     /**
-     *
+     * Add score to a player/member
      * @param playerScore score of a player
      * @should add player score to a member
      */
