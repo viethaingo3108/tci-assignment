@@ -17,7 +17,7 @@ public class Member {
 
     /**
      *
-     * @param playerScore
+     * @param playerScore score of a player
      * @should add player score to a member
      */
     public void addScore(PlayerScore playerScore){
