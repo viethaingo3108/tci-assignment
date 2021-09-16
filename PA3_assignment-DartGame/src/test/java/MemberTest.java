@@ -9,7 +9,9 @@ public class MemberTest {
      */
     @Test
     public void addScore_shouldAddPlayerScoreToAMember() throws Exception {
-        //TODO auto-generated
-        Assertions.fail("Not yet implemented");
+        Member sut = new Member("Hai Ngo");
+
+        sut.addScore(playerScore);
+        assertTrue(sut.getPlayerScores()).contains(playerScore);
     }
 }
