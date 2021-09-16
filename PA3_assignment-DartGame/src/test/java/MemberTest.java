@@ -19,4 +19,18 @@ public class MemberTest {
 
         assertTrue(sut.getPlayerScores().contains(playerScore));
     }
+
+    /**
+     * @verifies return a set of player scores
+     * @see Member#getPlayerScores()
+     */
+    @Test
+    public void getPlayerScores_shouldReturnASetOfPlayerScores() throws Exception {
+        Member sut = new Member("Hai Ngo");
+        PlayerScore playerScore = mock(PlayerScore.class);
+
+        sut.addScore(playerScore);
+
+        assertTrue(sut.getPlayerScores().contains(playerScore));
+    }
 }

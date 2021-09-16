@@ -24,6 +24,11 @@ public class Member {
         playerScores.add(playerScore);
     }
 
+    /**
+     * Return a set of player scores
+     * @return playerScores
+     * @should return a set of player scores
+     */
     public Set<PlayerScore> getPlayerScores() {
         return playerScores;
     }
