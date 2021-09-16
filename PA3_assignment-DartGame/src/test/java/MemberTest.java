@@ -6,15 +6,15 @@ import static org.mockito.Mockito.mock;
 
 public class MemberTest {
 
+    private Member sut = new Member("Hai Ngo");
+    private PlayerScore playerScore = mock(PlayerScore.class);
+
     /**
      * @verifies add player score to a member
      * @see Member#addScore(PlayerScore)
      */
     @Test
     public void addScore_shouldAddPlayerScoreToAMember() throws Exception {
-        Member sut = new Member("Hai Ngo");
-        PlayerScore playerScore = mock(PlayerScore.class);
-
         sut.addScore(playerScore);
 
         assertTrue(sut.getPlayerScores().contains(playerScore));
@@ -26,9 +26,6 @@ public class MemberTest {
      */
     @Test
     public void getPlayerScores_shouldReturnASetOfPlayerScores() throws Exception {
-        Member sut = new Member("Hai Ngo");
-        PlayerScore playerScore = mock(PlayerScore.class);
-
         sut.addScore(playerScore);
 
         assertTrue(sut.getPlayerScores().contains(playerScore));
