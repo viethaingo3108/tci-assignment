@@ -1,4 +1,4 @@
-import java.util.Date;
+import java.util.*;
 
 /**
  * Game is responsible for keeping track of whose turn it is to play and the player scores during a game.
@@ -7,13 +7,17 @@ import java.util.Date;
 public class Game {
 
     private Date date;
+    private Member[] members;
 
     /**
-     * @should set date when game is created
+     *
      * @param date
+     * @param members
+     * @should set date when game is created
      */
-    public Game(Date date){
+    public Game(Date date, Member[] members){
         this.date = date;
+        this.members = members;
     }
 
     public Date getDate() {
@@ -22,10 +26,13 @@ public class Game {
 
     /**
      *
-     * @return
+     * @return current player
      * @should keep track of player turn
      */
     public Member getCurrentPlayer(){
-
+        for(int i=0; i<members.length; i++){
+            return members[i];
+        }
+        return null;
     }
 }
