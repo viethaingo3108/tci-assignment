@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="TCI_demo_all_mavenversion" />
+        <module name="tci-week1_assignment_ExtendTheCourse" />
       </profile>
     </annotationProcessing>
   </component>
