@@ -19,4 +19,13 @@ public class Game {
     public Date getDate() {
         return date;
     }
+
+    /**
+     *
+     * @return
+     * @should keep track of player turn
+     */
+    public Member getCurrentPlayer(){
+
+    }
 }
