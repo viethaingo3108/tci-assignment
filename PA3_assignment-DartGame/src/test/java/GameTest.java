@@ -9,7 +9,8 @@ public class GameTest {
      */
     @Test
     public void Game_shouldSetDateWhenGameIsCreated() throws Exception {
-        //TODO auto-generated
-        Assertions.fail("Not yet implemented");
+        Game game = new Game(VALID_DATE);
+
+        assertEquals(game.getDate(), VALID_DATE);
     }
 }
