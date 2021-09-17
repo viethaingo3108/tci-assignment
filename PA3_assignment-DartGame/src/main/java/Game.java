@@ -10,7 +10,7 @@ public class Game {
     private Member[] members;
 
     /**
-     *
+     * Constructor for Game Object
      * @param date
      * @param members
      * @should set date when game is created
@@ -25,7 +25,7 @@ public class Game {
     }
 
     /**
-     *
+     * Method to keep track of which member has the turn to play
      * @return current player
      * @should keep track of player turn
      */
