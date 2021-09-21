@@ -41,4 +41,8 @@ public class Book {
     public int hashCode() {
         return Objects.hash(bookName, author);
     }
+
+    public String getBookName() {
+        return this.bookName;
+    }
 }
