@@ -16,7 +16,10 @@ public class Chapter {
      * @should throw IllegalArgumentException when chapter number is less than 0
      * @should show that chapters with same name and number are logically equal
      */
-    public Chapter(String chapterName, int chapterNumber, Chapter parent) {
+    public Chapter(String chapterName, int chapterNumber, Chapter parent) throws IllegalArgumentException{
+        if(chapterName == null){
+            throw new IllegalArgumentException("Chapter must have a name");
+        }
         this.chapterName = chapterName;
         this.chapterNumber = chapterNumber;
         this.parent = parent;
