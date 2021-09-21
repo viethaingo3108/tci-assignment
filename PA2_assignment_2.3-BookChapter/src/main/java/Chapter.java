@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Objects;
 
 public class Chapter {
     private String chapterName;
@@ -38,5 +39,18 @@ public class Chapter {
 
     public Chapter getParentChapter() {
         return this.parent;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Chapter)) return false;
+        Chapter chapter = (Chapter) o;
+        return chapterNumber == chapter.chapterNumber && chapterName.equals(chapter.chapterName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(chapterName, chapterNumber);
     }
 }
