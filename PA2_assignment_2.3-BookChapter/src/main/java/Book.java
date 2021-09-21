@@ -6,31 +6,26 @@ public class Book {
     private String bookName;
     private String author;
 
-    private List<Chapter> chapters = new ArrayList<>();
-    private int nrOfChapters = chapters.size();
+    private List<Chapter> chapters;
 
     /**
      *
      * @param bookName is name of the book
      * @param author is the book's author name
-     * @param nrOfChapters is the number of chapters in a book
      * @should throw IllegalArgumentException when name is null
      * @should throw IllegalArgumentException when author is null
-     * @should consists of zero or more Chapters
+     * @should show that books with same name and author are logically equal
      */
-    public Book(String bookName, String author, int nrOfChapters) throws IllegalArgumentException{
+    public Book(String bookName, String author) throws IllegalArgumentException{
         if(bookName == null){
             throw new IllegalArgumentException("Name of the book cannot be null");
         }
         if(author == null){
             throw new IllegalArgumentException("Author name cannot be null");
         }
-        if(nrOfChapters < 0){
-            throw new IllegalArgumentException("Book must consists of zero or more Chapters");
-        }
         this.bookName = bookName;
         this.author = author;
-        this.nrOfChapters = nrOfChapters;
+        this.chapters = new ArrayList<>();
     }
 
     @Override
