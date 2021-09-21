@@ -16,6 +16,7 @@ public class Chapter {
      * @should throw IllegalArgumentException when name is null
      * @should throw IllegalArgumentException when chapter number is less than 0
      * @should show that chapters with same name and number are logically equal
+     * @should show that parent chapter contains subchapters if any
      */
     public Chapter(String chapterName, int chapterNumber, Chapter parent) throws IllegalArgumentException{
         if(chapterName == null){
@@ -41,6 +42,7 @@ public class Chapter {
         return this.parent;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -53,4 +55,6 @@ public class Chapter {
     public int hashCode() {
         return Objects.hash(chapterName, chapterNumber);
     }
+
+
 }

@@ -59,4 +59,15 @@ class ChapterTest {
         assertEquals(c1, c2);
         assertThat(c1).hasSameHashCodeAs(c2);
     }
+
+    /**
+     * @verifies show that parent chapter contains subchapters if any
+     * @see Chapter#Chapter(String, int, Chapter)
+     */
+    @Test
+    public void Chapter_shouldShowThatParentChapterContainsSubchaptersIfAny() throws Exception {
+        Chapter sut = new Chapter(VALID_CHAPTER_NAME, VALID_CHAPTER_NUMBER, VALID_PARENT_CHAPTER);
+
+        assertThat(VALID_PARENT_CHAPTER.getSubChapters()).contains(sut);
+    }
 }
