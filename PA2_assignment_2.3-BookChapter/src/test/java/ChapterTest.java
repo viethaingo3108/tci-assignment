@@ -11,8 +11,11 @@ class ChapterTest {
      */
     @Test
     public void Chapter_shouldSetCorrectParameters() throws Exception {
-        //TODO auto-generated
-        Assertions.fail("Not yet implemented");
+        Chapter sut = new Chapter(VALID_CHAPTER_NAME, VALID_CHAPTER_NUMBER, VALID_PARENT_CHAPTER);
+
+        assertEquals(sut.getChapterName(), VALID_CHAPTER_NAME);
+        assertEquals(sut.getChapterNumber(), VALID_CHAPTER_NUMBER);
+        assertEquals(sut.getParentChapter(), VALID_PARENT_CHAPTER);
     }
 
     /**
