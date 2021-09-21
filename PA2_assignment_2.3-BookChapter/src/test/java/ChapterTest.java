@@ -41,8 +41,9 @@ class ChapterTest {
      */
     @Test
     public void Chapter_shouldThrowIllegalArgumentExceptionWhenChapterNumberIsLessThan0() throws Exception {
-        //TODO auto-generated
-        Assertions.fail("Not yet implemented");
+        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(()->{
+           new Chapter(VALID_CHAPTER_NAME, -1, VALID_PARENT_CHAPTER);
+        });
     }
 
     /**
