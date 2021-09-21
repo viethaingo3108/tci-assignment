@@ -46,4 +46,8 @@ public class Book {
     public String getBookName() {
         return this.bookName;
     }
+
+    public String getAuthor() {
+        return this.author;
+    }
 }
