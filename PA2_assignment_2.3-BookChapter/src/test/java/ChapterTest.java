@@ -29,8 +29,9 @@ class ChapterTest {
      */
     @Test
     public void Chapter_shouldThrowIllegalArgumentExceptionWhenNameIsNull() throws Exception {
-        //TODO auto-generated
-        Assertions.fail("Not yet implemented");
+        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(()->{
+           new Chapter(null, VALID_CHAPTER_NUMBER, VALID_PARENT_CHAPTER);
+        });
     }
 
     /**
