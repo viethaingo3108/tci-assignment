@@ -47,4 +47,15 @@ public class BookTest {
         assertThat(bookA).isEqualTo(bookB);
         assertThat(bookA).hasSameHashCodeAs(bookB);
     }
+
+    /**
+     * @verifies set correct name
+     * @see Book#Book(String, String)
+     */
+    @Test
+    public void Book_shouldSetCorrectName() throws Exception {
+        Book sut = new Book(VALID_BOOK_NAME, VALID_AUTHOR);
+
+        assertEquals(sut.getBookName(), VALID_BOOK_NAME);
+    }
 }
