@@ -21,4 +21,16 @@ public class Chapter {
         this.chapterNumber = chapterNumber;
         this.parent = parent;
     }
+
+    public String getChapterName() {
+        return this.chapterName;
+    }
+
+    public int getChapterNumber() {
+        return this.chapterNumber;
+    }
+
+    public Chapter getParentChapter() {
+        return this.parent;
+    }
 }

@@ -2,8 +2,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
 
 class ChapterTest {
+
+    private static String VALID_CHAPTER_NAME = "The first chapter";
+    private static int VALID_CHAPTER_NUMBER = 1;
+    private static Chapter VALID_PARENT_CHAPTER = mock(Chapter.class);
 
     /**
      * @verifies set correct parameters
