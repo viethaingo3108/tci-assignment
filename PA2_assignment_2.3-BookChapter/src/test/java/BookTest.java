@@ -13,6 +13,8 @@ public class BookTest {
     private String VALID_BOOK_NAME = "Book 1";
     private String VALID_AUTHOR = "Hai Ngo";
 
+    private Book sut = new Book(VALID_BOOK_NAME, VALID_AUTHOR);
+
     /**
      * @verifies throw IllegalArgumentException when name is null
      * @see Book#Book(String, String)
@@ -55,8 +57,6 @@ public class BookTest {
      */
     @Test
     public void Book_shouldSetCorrectName() throws Exception {
-        Book sut = new Book(VALID_BOOK_NAME, VALID_AUTHOR);
-
         assertEquals(sut.getBookName(), VALID_BOOK_NAME);
     }
 
@@ -66,8 +66,6 @@ public class BookTest {
      */
     @Test
     public void Book_shouldSetCorrectAuthor() throws Exception {
-        Book sut = new Book(VALID_BOOK_NAME, VALID_AUTHOR);
-
         assertEquals(sut.getAuthor(), VALID_AUTHOR);
     }
 }
