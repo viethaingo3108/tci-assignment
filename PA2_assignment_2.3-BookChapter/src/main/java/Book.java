@@ -16,6 +16,7 @@ public class Book {
      * @should throw IllegalArgumentException when author is null
      * @should show that books with same name and author are logically equal
      * @should set correct name
+     * @should set correct author
      */
     public Book(String bookName, String author) throws IllegalArgumentException{
         if(bookName == null){

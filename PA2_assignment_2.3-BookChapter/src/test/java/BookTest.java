@@ -59,4 +59,15 @@ public class BookTest {
 
         assertEquals(sut.getBookName(), VALID_BOOK_NAME);
     }
+
+    /**
+     * @verifies set correct author
+     * @see Book#Book(String, String)
+     */
+    @Test
+    public void Book_shouldSetCorrectAuthor() throws Exception {
+        Book sut = new Book(VALID_BOOK_NAME, VALID_AUTHOR);
+
+        assertEquals(sut.getAuthor(), VALID_AUTHOR);
+    }
 }
