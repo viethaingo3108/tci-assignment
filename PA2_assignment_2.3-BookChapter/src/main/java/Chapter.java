@@ -20,6 +20,9 @@ public class Chapter {
         if(chapterName == null){
             throw new IllegalArgumentException("Chapter must have a name");
         }
+        if(chapterNumber < 0){
+            throw new IllegalArgumentException("Chapter number must be a positive number");
+        }
         this.chapterName = chapterName;
         this.chapterNumber = chapterNumber;
         this.parent = parent;
