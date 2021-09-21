@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
@@ -52,7 +53,10 @@ class ChapterTest {
      */
     @Test
     public void Chapter_shouldShowThatChaptersWithSameNameAndNumberAreLogicallyEqual() throws Exception {
-        //TODO auto-generated
-        Assertions.fail("Not yet implemented");
+        Chapter c1 = new Chapter(VALID_CHAPTER_NAME, VALID_CHAPTER_NUMBER, VALID_PARENT_CHAPTER);
+        Chapter c2 = new Chapter(VALID_CHAPTER_NAME, VALID_CHAPTER_NUMBER, VALID_PARENT_CHAPTER);
+
+        assertEquals(c1, c2);
+        assertThat(c1).hasSameHashCodeAs(c2);
     }
 }
