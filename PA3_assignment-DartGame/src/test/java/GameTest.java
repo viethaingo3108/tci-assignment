@@ -37,4 +37,13 @@ public class GameTest {
     }
 
 
+    /**
+     * @verifies change turn automatically after score entered
+     * @see Game#Game(Date, Member[])
+     */
+    @Test
+    public void Game_shouldChangeTurnAutomaticallyAfterScoreEntered() throws Exception {
+        //TODO auto-generated
+        Assertions.fail("Not yet implemented");
+    }
 }

@@ -14,6 +14,7 @@ public class Game {
      * @param date
      * @param members
      * @should set date when game is created
+     * @should change turn automatically after score entered
      */
     public Game(Date date, Member[] members){
         this.date = date;
